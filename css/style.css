@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto Condensed',Arial,sans-serif;
+    background-color: #121212;
+    font-size: 16px;
+    height: 100vh;
+}
+
+.todoList{
+    width: 100%;
+    max-width: 600px;
+}
+
+
+.todoList header{
+    padding: 15px;
+    background-color: rgb(236, 29, 29);
+    border-top-left-radius:4px ;
+    border-top-right-radius: 4px;
+    color: white;
+    font-size: 1.2em;
+}
+.wrapper-list .list li{
+    position: relative;
+    display: flex ;
+    background-color: #262e4c;
+    padding: 20px;
+    border-bottom: 1px solid #1c2640;
+    color: #b1b2c9;
+    transition: background-color 300ms ease;
+
+}
+.wrapper-list .list li:hover{
+    background-color: #363d58;
+}
+.wrapper-list .list li:hover button.remover{
+    opacity: 1;
+}
+.wrapper-list .list .check{
+    position: relative;
+    background-color: #404a6e;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.wrapper-list .list .done .check::after{
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+.wrapper-list .list .done .task{
+    text-decoration: line-through;
+}
+
+.wrapper-list .list .check:hover{
+    background-color: #171d37;
+
+}
+
+.wrapper-list .list button.remover{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border-radius: 100%;
+    background-color: red;
+    border: none;
+    cursor: pointer ;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+.wrapper-list button.remover::after{
+    content: 'x';
+    color: #fff;
+    display: block;
+
+}
+
+.todoList footer{
+    background-color: #171d37;
+}
+
+.todoList footer input{
+    background-color: #171d37;
+    padding: 20px;
+    width: 90%;
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Roboto Condensed',Arial,sans-serif;
+}
